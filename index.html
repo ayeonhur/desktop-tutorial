@@ -33,7 +33,7 @@
             if (isFailed) return null; // 모든 확장자가 없으면 렌더링하지 않음 (숨김 처리)
 
             const currentExt = extensions[extIndex];
-            const imageSrc = `/images/${movieId}${index}.${currentExt}`;
+            const imageSrc = `images/${movieId}${index}.${currentExt}`;
 
             const handleError = () => {
                 if (extIndex < extensions.length - 1) {
