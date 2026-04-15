@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 정보 게시판</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- 배경은 어두운 톤(bg-gray-900)으로 설정 -->
+<body class="bg-gray-900 text-white min-h-screen font-sans p-6 md:p-10">
+
+    <!-- 전체 레이아웃을 감싸는 컨테이너 -->
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- 페이지 헤더 -->
+        <header class="mb-10 text-center md:text-left">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">🎬 추천 영화 게시판</h1>
+            <p class="mt-2 text-gray-400">최신 독립 영화 및 스릴러 명작을 만나보세요.</p>
+        </header>
+
+        <!-- 카드 보드 형태의 그리드 레이아웃 (반응형: 모바일 1열, 태블릿 2열, PC 3열) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- 📌 첫 번째 영화 카드 -->
+            <!-- 카드는 깔끔한 밝은 회색(bg-gray-50)으로 설정, 마우스 오버 시 살짝 떠오르는 효과 추가 -->
+            <article class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
+                
+                <!-- 영화 포스터 (이미지 주소를 src 속성에 넣어주세요) -->
+                <!-- 예시로 어두운 분위기의 임시 무료 이미지를 넣었습니다. -->
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80" 
+                     alt="살목지 영화 포스터" 
+                     class="w-full h-80 object-cover">
+                
+                <!-- 카드 내용 영역 -->
+                <div class="p-6 flex flex-col flex-grow">
+                    <!-- 영화 제목 -->
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4 leading-snug">
+                        살목지, Salmokji : Whispering Water (2025)
+                    </h2>
+                    
+                    <!-- 시놉시스 (요약하지 않은 원본 텍스트가 들어갈 자리입니다) -->
+                    <!-- 텍스트가 길어도 자연스럽게 줄바꿈되며 읽기 편하도록 자간과 줄간격을 조정했습니다. -->
+                    <div class="text-gray-700 text-sm leading-relaxed space-y-4">
+                        <p>
+                            여기에 제공해주실 시놉시스 원문 텍스트를 그대로 붙여넣으시면 됩니다. 텍스트가 길어도 카드의 배경이 자동으로 늘어나며 깔끔하게 표시됩니다.
+                        </p>
+                        <p>
+                            어느 외딴 마을 '살목지', 그곳에는 기이한 전설이 내려온다. 마을을 가로지르는 검은 냇가에서는 매일 밤 누군가의 속삭임이 들려오고, 그 소리를 들은 자는 흔적도 없이 사라진다는 것이다. 서울에서 내려온 다큐멘터리 PD '수연'은 이 기묘한 현상을 취재하기 위해 마을에 발을 들인다.
+                        </p>
+                        <p>
+                            하지만 촌장을 비롯한 마을 사람들은 무언가를 숨기는 듯 적대적이고, 수연의 카메라에는 기괴한 형상들이 찍히기 시작한다. 속삭임의 진짜 정체는 무엇이며, 이 마을이 감추고 있는 끔찍한 진실은 무엇인가? 벗어날 수 없는 공포가 시작된다.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 참고용 임시 카드 2 (그리드 레이아웃 확인용) -->
+            <!-- 이 아래의 <article> 태그들은 필요 없다면 지우셔도 됩니다. -->
+            <article class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg flex flex-col opacity-75">
+                <div class="w-full h-80 bg-gray-300 flex items-center justify-center text-gray-500">포스터 이미지 2</div>
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">추가 영화 제목</h2>
+                    <p class="text-gray-600 text-sm">게시판 형태를 보여주기 위한 임시 카드입니다. 첫 번째 카드와 동일한 구조로 계속 추가할 수 있습니다.</p>
+                </div>
+            </article>
+
+            <article class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg flex flex-col opacity-75">
+                <div class="w-full h-80 bg-gray-300 flex items-center justify-center text-gray-500">포스터 이미지 3</div>
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">추가 영화 제목</h2>
+                    <p class="text-gray-600 text-sm">게시판 형태를 보여주기 위한 임시 카드입니다.</p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+</body>
+</html>
